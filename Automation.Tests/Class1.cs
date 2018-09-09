@@ -8,5 +8,6 @@ namespace Automation.Tests
 {
     public class Class1
     {
+
     }
 }
