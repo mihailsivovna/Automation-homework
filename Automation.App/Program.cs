@@ -22,20 +22,35 @@ namespace Automation.App
 
 
 
-            float a = 28.97f;
-            int b = 356;
-            float c = a * b;
-            Console.WriteLine(c);
-            Console.ReadKey();
+            double a;
+            Console.Write("Enter price per 1 dollar: ");
+            string input = Console.ReadLine();
+            a = Convert.ToDouble(input);
+            double b;
+            Console.Write("Enter amount: ");
+            string input2 = Console.ReadLine();
+            b = Convert.ToDouble(input2);
+            double c = a * b;
+            Console.Write( b + " dollars equal " + c);
+            Console.ReadLine();
 
 
-            int d = 59;
-            int e = 7;
-            int f = 59 / 7;
-            int h = 59 % 7;
-            Console.WriteLine(f);
-            Console.WriteLine(h);
-            Console.ReadKey();
+
+
+            int d;
+            Console.Write("Введите первое число: ");
+            string input3 = Console.ReadLine();
+            d = Convert.ToInt32(input3);
+            int f;
+            Console.Write("Введите второе число: ");
+            string input4 = Console.ReadLine();
+            f = Convert.ToInt32(input4);
+            int e = d / f;
+            float h = d % f;
+            Console.Write("Неполное частное: " + e + " " + " Oстаток: " + h);
+            Console.ReadLine();
+
+        
 
 
 
