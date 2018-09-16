@@ -11,52 +11,105 @@ namespace Automation.App
         static void Main(string[] args)
         {
 
-            string name;
-            Console.Write("Enter your name: ");
-            name =Console.ReadLine();
-            string surname;
-            Console.Write("Enter your surname: ");
-            surname = Console.ReadLine();
-            Console.WriteLine("Nice to meet you," + " " + name + " " + surname);
-            Console.ReadLine();
 
 
+            Console.Write("Введите день недели: ");
+            string week = Console.ReadLine();
 
-            double a;
-            Console.Write("Enter price per 1 dollar: ");
+            switch (week)
+            {
+                case "Понедельник":
+                    Console.WriteLine($"{week} - рабочий день недели");
+                    break;
+
+                case "Вторник":
+                    Console.WriteLine($"{week} - рабочий день недели");
+                    break;
+                case "Среда":
+                    Console.WriteLine($"{week} - рабочий день недели");
+                    break;
+                case "Четверг":
+                    Console.WriteLine($"{week} - рабочий день недели");
+                    break;
+                case "Пятница":
+                    Console.WriteLine($"{week} - рабочий день недели");
+                    break;
+                case "Суббота":
+                    Console.WriteLine($"{week} - выходной день недели");
+                    break;
+                case "Воскресение":
+                    Console.WriteLine($"{week} - выходной день недели");
+                    break;
+
+               
+            }
+
+            Console.Write("Введите размер: ");
             string input = Console.ReadLine();
-            a = Convert.ToDouble(input);
-            double b;
-            Console.Write("Enter amount: ");
-            string input2 = Console.ReadLine();
-            b = Convert.ToDouble(input2);
-            double c = a * b;
-            Console.Write( b + " dollars equal " + c);
+            int a = Convert.ToInt32(input);
+            int b = Convert.ToInt32(input);
+            int c = Convert.ToInt32(input);
+            int d = Convert.ToInt32(input);
+            int h = Convert.ToInt32(input);
+            int g = Convert.ToInt32(input);
+            int j = Convert.ToInt32(input);
+            int k = Convert.ToInt32(input);
+
+
+
+
+            if (a <= 31)
+                Console.WriteLine("xxs");
+            else if (b > 31 && b <= 32)
+                Console.WriteLine("xs");
+            else if (c > 32  && c <= 36)
+                Console.WriteLine("s");
+            else if (d > 36 && d <= 40)
+                Console.WriteLine("m");
+            else if (h > 40 && h <= 44)
+                Console.WriteLine("l");
+            else if (g > 44 && g <=48)
+                Console.WriteLine("xl");
+            else if (j > 48 && j <= 50)
+                Console.WriteLine("2xl");
+            else if (k > 50)
+                    Console.WriteLine("Неизвестный размер");
+           
             Console.ReadLine();
 
 
 
-
-            int d;
-            Console.Write("Введите первое число: ");
+            Console.Write("Введите год: ");
             string input3 = Console.ReadLine();
-            d = Convert.ToInt32(input3);
-            int f;
-            Console.Write("Введите второе число: ");
-            string input4 = Console.ReadLine();
-            f = Convert.ToInt32(input4);
-            int e = d / f;
-            float h = d % f;
-            Console.Write("Неполное частное: " + e + " " + " Oстаток: " + h);
-            Console.ReadLine();
+            int m = Convert.ToInt32(input3);
+            int n = Convert.ToInt32(input3);
+            m = (n % 4);
 
+            if (m == 0)
+                Console.WriteLine($"{input3} - год высокосный ");
+            else
+                Console.WriteLine($"{input3} - год невысокосный ");
+            Console.ReadLine();
         
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
-
-
-
-    }
+}
 }
