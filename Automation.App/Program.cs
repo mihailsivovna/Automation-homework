@@ -73,7 +73,7 @@ namespace Automation_App
             else if (a <= 50)
                 Console.WriteLine("2xl");
             else if (a > 50)
-                Console.WriteLine("Неизвестный размер")
+                Console.WriteLine("Неизвестный размер");
 
             Console.ReadLine();
         }
