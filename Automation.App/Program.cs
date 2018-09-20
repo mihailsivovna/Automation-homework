@@ -11,72 +11,130 @@ namespace Automation_App
         static void Main(string[] args)
         {
 
-            Console.Write("Введите год: ");
-            string year = Console.ReadLine();
-            int n = Convert.ToInt32(year);
-            int m;
-            m = (n % 4);
-            if (m == 0)
-                Console.WriteLine($"{year} - год высокосный ");
-            else
-                Console.WriteLine($"{year} - год невысокосный ");
+            Console.WriteLine("До числа: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            int fib1 = 1;
+            Console.Write("{0} ", fib1);
+            int fib2 = 1;
+            Console.Write("{0} ", fib2);
+            int sum = 0;
+
+            while (number >= sum)
+            {
+                sum = fib1 + fib2;
+                Console.Write("{0} ", sum);
+
+                fib1 = fib2;
+                fib2 = sum;
+            }
             Console.ReadLine();
 
 
-
-            Console.Write("Введите день недели: ");
-            string week = Console.ReadLine();
-
-            switch (week)
             {
-                case "Понедельник":
-                    Console.WriteLine($"{week} - рабочий день недели");
-                    break;
+                for (int h = 0; h <= 100; h++)
 
-                case "Вторник":
-                    Console.WriteLine($"{week} - рабочий день недели");
-                    break;
-                case "Среда":
-                    Console.WriteLine($"{week} - рабочий день недели");
-                    break;
-                case "Четверг":
-                    Console.WriteLine($"{week} - рабочий день недели");
-                    break;
-                case "Пятница":
-                    Console.WriteLine($"{week} - рабочий день недели");
-                    break;
-                case "Суббота":
-                    Console.WriteLine($"{week} - выходной день недели");
-                    break;
-                case "Воскресение":
-                    Console.WriteLine($"{week} - выходной день недели");
-                    break;
+
+
+                {
+
+                    if (h % 3 == 0)
+                        Console.WriteLine("Фаз");
+                    if (h % 5 == 0)
+                        Console.WriteLine("Баз");
+                    if (h % 3 == 1 & h % 5 == 1)
+                        Console.WriteLine("ФазБаз");
+
+
+                }
+                Console.ReadLine();
+
+
+
+                {
+                    string username = "name";
+                    string password = "password";
+
+                    var k = 0;
+
+                    do
+                    {
+                        if (k == 5)
+                        {
+                            Console.WriteLine(" Аккаунт заблокирован. Повторите попытку позже ");
+                            break;
+                        }
+
+                        Console.Write("Введите логин: ");
+                        var name = Console.ReadLine();
+                        Console.Write("Введите пароль: ");
+                        var pass = Console.ReadLine();
+
+                        if (username == name && password == pass)
+                        {
+                            Console.WriteLine("Успешный вход");
+                            break;
+                        }
+
+                        if (username != name || password != pass)
+                        {
+                            Console.WriteLine("Неправильный логин или пароль");
+                        }
+
+                        Console.WriteLine();
+                        k++;
+
+                    } while (k <= 5);
+
+                    Console.ReadLine();
+                }
+
             }
 
-            Console.Write("Введите размер: ");
-            string size = Console.ReadLine();
-            int a = Convert.ToInt32(size);
-
-
-            if (a <= 31)
-                Console.WriteLine("xxs");
-            else if (a <= 32)
-                Console.WriteLine("xs");
-            else if (a <= 36)
-                Console.WriteLine("s");
-            else if (a <= 40)
-                Console.WriteLine("m");
-            else if (a <= 44)
-                Console.WriteLine("l");
-            else if (a <= 48)
-                Console.WriteLine("xl");
-            else if (a <= 50)
-                Console.WriteLine("2xl");
-            else if (a > 50)
-                Console.WriteLine("Неизвестный размер");
-
-            Console.ReadLine();
         }
     }
 }
 
+
+    
+
+
+               
+
+                
+        
+
+    
+    
+
+
+
+            
+
+            
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+   
+
+
+
+
+
+
+        
+    
