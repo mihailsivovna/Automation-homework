@@ -12,40 +12,11 @@ namespace Automation.App
         static void Main(string[] args)
         {
 
-            GetNumber();
-            Console.ReadLine();
-
-        }
-
-
-        public static int GetNumber()
-        {
-
-            int x=0;
-            while (true)
-            if(x == 0)
+            Page page = new Page(null);
             
-
-
-                try
-                {
-                    Console.Write("Введите число: ");
-                    int number = Convert.ToInt32(Console.ReadLine());
-                    Console.Write(number + " - число ");
-                    break;
-                    
-
-                }
-                catch (FormatException)
-
-                {
-                    Console.WriteLine("Не является числом");
-                }
-
-            return x;
-
+            page.Login("name","login");
+            Console.ReadLine();
         }
-
 
 
     }
