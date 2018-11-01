@@ -22,50 +22,50 @@ namespace ConsoleApp
             driver.Navigate().GoToUrl("https://www.facebook.com/");
             Console.WriteLine(driver.Title);
 
-            IWebElement userName = driver.FindElement(By.Name("email"));
-            userName.SendKeys("");
+            IWebElement username = driver.FindElement(By.Name("email"));
+            username.SendKeys("");
 
             IWebElement password = driver.FindElement(By.Name("pass"));
             password.SendKeys("");
             Thread.Sleep(2000);
 
-            IWebElement button3 = driver.FindElement(By.Id("loginbutton"));
-            button3.Click();
+            IWebElement closenotification = driver.FindElement(By.Id("loginbutton"));
+            closenotification.Click();
 
-            IWebElement button4 = driver.FindElement(By.ClassName("_1vp5"));
-            button4.Click();
-
-            Thread.Sleep(2000);
-            IWebElement button5 = driver.FindElement(By.XPath("//a[@data-tab-key='friends']"));
-            button5.Click();
+            IWebElement profile = driver.FindElement(By.ClassName("_1vp5"));
+            profile.Click();
 
             Thread.Sleep(2000);
-            IWebElement button6 = driver.FindElement(By.XPath("//div[@class ='fsl fwb fcb']"));
-            button6.Click();
+            IWebElement friends = driver.FindElement(By.XPath("//a[@data-tab-key='friends']"));
+            friends.Click();
 
             Thread.Sleep(2000);
-            IWebElement button7 = driver.FindElement(By.XPath("//div[@class ='_1ktf']"));
-            button7.Click();
+            IWebElement friend = driver.FindElement(By.XPath("//div[@class ='fsl fwb fcb']"));
+            friend.Click();
 
             Thread.Sleep(2000);
-            IWebElement button8 = driver.FindElement(By.XPath("//form[contains(@class,'fbPhotosSnowliftFeedbackForm')]//a[contains(@class,'UFILikeLink')]"));
-            button8.Click();
+            IWebElement photo = driver.FindElement(By.XPath("//div[@class ='_1ktf']"));
+            photo.Click();
 
             Thread.Sleep(2000);
-            IWebElement button9 = driver.FindElement(By.XPath("//a[contains(@class,'_xlt _418x')]"));
-            button9.Click();
+            IWebElement like = driver.FindElement(By.XPath("//form[contains(@class,'fbPhotosSnowliftFeedbackForm')]//a[contains(@class,'UFILikeLink')]"));
+            like.Click();
 
             Thread.Sleep(2000);
-            IWebElement button10 = driver.FindElement(By.XPath("//a[@data-referrerid ='100003385789583']"));
-            button10.Click();
+            IWebElement close = driver.FindElement(By.XPath("//a[contains(@class,'_xlt _418x')]"));
+            close.Click();
 
             Thread.Sleep(2000);
-            IWebElement button11 = driver.FindElement(By.XPath("//form[contains(@class,'fbPhotosSnowliftFeedbackForm')]//a[contains(@class,'UFILikeLink')]"));
-            button11.Click();
+            IWebElement nextphoto = driver.FindElement(By.XPath("//a[@data-referrerid ='100003385789583']"));
+            nextphoto.Click();
 
             Thread.Sleep(2000);
-            IWebElement button12 = driver.FindElement(By.XPath("//a[contains(@class,'_xlt _418x')]"));
-            button12.Click();
+            IWebElement nextlike = driver.FindElement(By.XPath("//form[contains(@class,'fbPhotosSnowliftFeedbackForm')]//a[contains(@class,'UFILikeLink')]"));
+            nextlike.Click();
+
+            Thread.Sleep(2000);
+            IWebElement nextclose = driver.FindElement(By.XPath("//a[contains(@class,'_xlt _418x')]"));
+            nextclose.Click();
 
 
 
