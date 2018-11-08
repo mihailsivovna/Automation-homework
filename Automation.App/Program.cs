@@ -16,18 +16,16 @@ namespace ConsoleApp
         {
 
             IWebDriver driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("http://htmlbook.ru/html/select");
-          
-            var day = driver.FindElement(By.Name("select2"));
-            var select2 = new SelectElement(day);
-            select2.SelectByText("Крыса Лариса");
-            Thread.Sleep(2000);
-          
+            //driver.Manage().Window.Maximize();
+            //driver.Navigate().GoToUrl("http://htmlbook.ru/html/select");
+
+            //var characters = driver.FindElement(By.Name("select2"));
+            //var select_characters = new SelectElement(characters);
+            //select_characters.SelectByText("Крыса Лариса");
+            //Thread.Sleep(2000);
 
 
 
-            IWebDriver driver1 = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://www.facebook.com/");
 
@@ -36,15 +34,17 @@ namespace ConsoleApp
             month_value.SelectByValue("6");
 
 
+            var year = driver.FindElement(By.Id("year"));
+            var year_value = new SelectElement(year);
+            year_value.SelectByIndex(1);
 
 
-            driver.Quit();
+            //driver.quit();
 
-            
+
 
 
         }
 
     }
 }
-
